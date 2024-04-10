@@ -11,7 +11,9 @@ else:
     address = pyperclip.paste()
     
 
-webbrowser.open(address)
-""" browser = webdriver.Firefox() """
+""" webbrowser.open(address) """
+browser = webdriver.Chrome()
 
 browser.get(address)
+
+print(address)
