@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: rgb(1, 1, 22);
+}
+
+.main-container {
+  max-width: 760px;
+  margin: 10px;
+}
+
+.main-container img {
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.main-container h1 {
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.main-container p {
+  color: whitesmoke;
+  margin: 15px 0;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 1.1;
+  scale: 0.95;
+}
+
+.trailer-container {
+  /* display: none; */
+  background-color: #141414;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.non-active.trailer-container {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer-container video {
+    position: relative;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .trailer-container video {
+        max-width: 90%;
+    }
+}
